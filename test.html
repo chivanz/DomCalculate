@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<style>    
+    div{
+        margin: auto;
+        box-shadow: 10px 15px 20px;      
+        width: 30%;
+        height: 300px;
+        margin-top: 20px;
+        background-color: aliceblue;
+        border-radius: 5px;   
+        
+    }
+    form{
+        margin-left: 50px;
+        
+    }
+    button{
+        width: 50%;
+        background-color: green;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        padding: 10px 20px;     
+        border-radius: 5px;
+        /* display: flex;
+        justify-content: center;
+        flex-direction: column; */
+    } 
+</style>
+<body>  
+    <div>
+        <form  action="">
+            <label for="" >Input Value A</label>
+            <input type="text" id="valueA" > <br>
+
+            <label for="" class="mt-4">Input Value B</label>
+            <input type="text" id="valueB" > <br>
+
+            <label for="" class="mt-4">Result Value</label>
+            <input type="text" id="Rs"> <br>
+
+            <button onclick="Calculate()">Calculate</button>
+            <button onclick="Reset()">Reset</button>
+        </form>       
+    </div>
+    <script>
+        function Calculate() {
+            let a, b;
+            a =parseFloat (document.getElementById("valueA").value);
+            b =parseFloat (document.getElementById("valueB").value);
+            document.getElementById("Rs").value = a - b;            
+        }
+        function Reset(){
+            window.location.reload()
+        }
+    </script>
+
+    
+</body>
+</html>
